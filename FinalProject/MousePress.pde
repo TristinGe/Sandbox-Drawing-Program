@@ -12,5 +12,5 @@ void mousepress()
   //
   if (mouseX>=toolsX && mouseX<=toolsX+toolsWidth && mouseY>=toolsY && mouseY<=toolsY+toolsHeight && toolBarOn==false)toolBarOn=true;println("true");
    //{if (toolBarOn=true){toolBarOn=true;println("true");}else{toolBarOn=false;println("false");}}
-  if (mouseX>=toolsX && mouseX<=toolsX+toolsWidth && mouseY>=toolsY && mouseY<=toolsY+toolsHeight && toolBarOn==true){if(toolBarOn=true){toolBarOn=false;} else {toolBarOn=false;}};println("false");
+  //if (mouseX>=toolsX && mouseX<=toolsX+toolsWidth && mouseY>=toolsY && mouseY<=toolsY+toolsHeight && toolBarOn==true){if(toolBarOn=true){toolBarOn=false;} else {toolBarOn=false;}};println("false");
 }
