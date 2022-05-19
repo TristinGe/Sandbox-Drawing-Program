@@ -3,7 +3,7 @@ Boolean draw = false, toolBarOn = false;
 float diameter;
 float quitBX, quitBY, quitBWidth, quitBHeight;
 int reset=1, intilSize=55, size;
-color white=#FFFFFF, black=#000000, red=#FF0303, quitBcolour, buttonBlue=#3EA9FF;
+color white=#FFFFFF, black=#000000, red=#FF0303, quitBcolour, buttonBlue=#3EA9FF, grey=#CCCCCC;
 PFont font;
 
 float NpaperX, NpaperY, NpaperWidth, NpaperHeight;
