@@ -1,4 +1,5 @@
 // Global Variables
+String quitBString="Quit", secTextString="?", tools="tools";
 //
 void textSetup()
 {

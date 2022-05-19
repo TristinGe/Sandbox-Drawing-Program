@@ -1,8 +1,8 @@
 void quit() 
 {
   //Quit button
-  if (mouseX>=quitBX && mouseX<=quitBX+quitBWidth && mouseY>=quitBY && mouseY<=quitBY+quitBHeight) {quitBcolour = red;
-  } else {quitBcolour=black;}
+  if (mouseX>=quitBX && mouseX<=quitBX+quitBWidth && mouseY>=quitBY && mouseY<=quitBY+quitBHeight) {
+    quitBcolour = red;} else {quitBcolour=white;}
   fill(quitBcolour);
   noStroke(); //remove rect() outline
   rect(quitBX, quitBY, quitBWidth, quitBHeight);
@@ -14,29 +14,45 @@ void quit()
   size = 20;
   textFont(font, size);
   text(quitBString, quitBX, quitBY, quitBWidth, quitBHeight);}
-  //
-  //
-void Newpaper1(){
+//
+//
+void Newpaper1() {
   //Second Text
   fill(white);
-  rect(secTextX, secTextY, secTextWidth, secTextHeight);
+  rect(NpaperX, NpaperY, NpaperWidth, NpaperHeight);
   fill(black); //Ink
   textAlign (CENTER, CENTER);
   size = 20;
   textFont(font, size);
-  text(secTextString, secTextX, secTextY, secTextWidth, secTextHeight);
+  text(secTextString, NpaperX, NpaperY, NpaperWidth, NpaperHeight);
   fill(white);}
-  //
-  //
-void mousepress()
+//
+//
+void tool()
 {
-  //Paper-Button
-  if ( mouseX>=drawSurfaceX && mouseX<=drawSurfaceX+drawSurfaceWidth && mouseY>=drawSurfaceY && mouseY<=drawSurfaceY+drawSurfaceHeight) 
-  {if(draw == true) {draw=false;} else {draw=true;}//End draw boolean
-  }//End Paper-Button
+  if (mouseX>=toolsX && mouseX<=toolsX+toolsWidth && mouseY>=toolsY && mouseY<=toolsY+toolsHeight) {
+    fill(buttonBlue);} else {fill(white);}
+  //fill(quitBcolour);
+  noStroke(); //remove rect() outline
+  rect(toolsX, toolsY, toolsWidth, toolsHeight);
+  stroke(reset);
   //
-  if (mouseX>=quitBX && mouseX<=quitBX+quitBWidth && mouseY>=quitBY && mouseY<=quitBY+quitBHeight)exit();
-  //
-  //New Paper
-  if (mouseX>=secTextX && mouseX<=secTextX+secTextWidth && mouseY>=secTextY && mouseY<=secTextY+secTextHeight)paper=true;
+  //Quit Button Text
+  fill(black); //Ink
+  textAlign (CENTER, CENTER);
+  size = 20;
+  textFont(font, size);
+  text(tools, toolsX, toolsY, toolsWidth, toolsHeight);}
+//
+void toolBar()
+{
+  if (toolBarOn==true) {
+    //noStroke();
+    //pencil
+    fill(white);
+    rect(DlineX, DlineY, DlineWidth, DlineHeight); 
+    
+    //ellipse(elineX, elineY, elineD, elineD);
+    stroke(reset);
+  }
 }
