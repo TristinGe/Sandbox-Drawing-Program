@@ -1,5 +1,5 @@
 // Global Variables
-Boolean draw = false, toolBarOn = false;
+Boolean draw = false, toolBarOn = false, toolBarReset = true;
 float diameter;
 float quitBX, quitBY, quitBWidth, quitBHeight;
 int reset=1, intilSize=55, size;

@@ -10,7 +10,7 @@ void mousepress()
   //New Paper
   if (mouseX>=NpaperX && mouseX<=NpaperX+NpaperWidth && mouseY>=NpaperY && mouseY<=NpaperY+NpaperHeight)paper=true;
   //
-  if (mouseX>=toolsX && mouseX<=toolsX+toolsWidth && mouseY>=toolsY && mouseY<=toolsY+toolsHeight){if(toolBarOn == true) {toolBarOn=false;} else {toolBarOn=true;}}//End draw boolean}
+  if (mouseX>=toolsX && mouseX<=toolsX+toolsWidth && mouseY>=toolsY && mouseY<=toolsY+toolsHeight){if(toolBarOn == false) {toolBarOn=true;toolBarReset=false;println("On");} else {toolBarOn=false;toolBarReset=true;println("Off");}}//End draw boolean}
    //{if (toolBarOn=true){toolBarOn=true;println("true");}else{toolBarOn=false;println("false");}}
   //if (mouseX>=toolsX && mouseX<=toolsX+toolsWidth && mouseY>=toolsY && mouseY<=toolsY+toolsHeight && toolBarOn==true){if(toolBarOn=true){toolBarOn=false;} else {toolBarOn=false;}};println("false");
 }

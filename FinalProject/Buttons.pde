@@ -47,12 +47,18 @@ void tool()
 void toolBar()
 {
   if (toolBarOn==true) {
-    //noStroke();
+    noStroke();
     //pencil
     fill(white);
     rect(DlineX, DlineY, DlineWidth, DlineHeight); 
     
     //ellipse(elineX, elineY, elineD, elineD);
-    stroke(reset);
+    stroke(reset);}
+    if (toolBarReset == true) {
+   noStroke();
+   fill(grey);
+      rect(DlineX, DlineY, DlineWidth, DlineHeight);
+      fill(white);
+      stroke(reset);
   }
 }
