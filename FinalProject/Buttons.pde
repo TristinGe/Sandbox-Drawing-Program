@@ -50,14 +50,20 @@ void toolBar()
     noStroke();
     //pencil
     fill(white);
-    rect(DlineX, DlineY, DlineWidth, DlineHeight); 
+    rect(DlineX1, DlineY1, DlineWidth, DlineHeight); 
+    //rect
+    fill(lgrey);
+    rect(DlineX2, DlineY2, DlineWidth, DlineHeight); 
+    //tri
+    fill(white);
+    rect(DlineX3, DlineY3, DlineWidth, DlineHeight); 
     
     //ellipse(elineX, elineY, elineD, elineD);
     stroke(reset);}
     if (toolBarReset == true) {
    noStroke();
    fill(grey);
-      rect(DlineX, DlineY, DlineWidth, DlineHeight);
+      rect(DlineX1, DlineY1, DlineWidth*3, DlineHeight);
       fill(white);
       stroke(reset);
   }

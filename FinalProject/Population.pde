@@ -22,12 +22,18 @@ void population()
   //
   toolsX = width*0;
   toolsY = height/10;
-  toolsWidth = quitBHeight;
-  toolsHeight = quitBHeight;
+  toolsWidth = width/19;
+  toolsHeight = height/10;
   //
   //line tool
-  DlineX = width/10;
-  DlineY = height/10;
-  DlineWidth =width/10;
+  DlineX1 = width/18;
+  DlineY1 = height/10;
+  DlineWidth =width/18;
   DlineHeight = height/10;
+  //rect tool
+  DlineX2 = width*2/18;
+  DlineY2 = height/10;
+  //tri
+  DlineX3 = width*3/18;
+  DlineY3 = height/10;
 }
