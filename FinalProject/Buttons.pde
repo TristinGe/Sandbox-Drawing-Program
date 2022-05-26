@@ -51,19 +51,23 @@ void toolBar()
     //pencil
     fill(white);
     rect(DlineX1, DlineY1, DlineWidth, DlineHeight); 
+    fill(black);
+    ellipse(DlineX1*1.5, DlineY1*1.5, DlineWidth/9, DlineWidth/9);
     //rect
     fill(lgrey);
     rect(DlineX2, DlineY2, DlineWidth, DlineHeight); 
     //tri
     fill(white);
     rect(DlineX3, DlineY3, DlineWidth, DlineHeight); 
+    fill(black);
+    triangle(DlineX3, DlineY3, DlineX3+30, DlineY3, DlineY3, DlineY3);
     
     //ellipse(elineX, elineY, elineD, elineD);
     stroke(reset);}
     if (toolBarReset == true) {
    noStroke();
    fill(grey);
-      rect(DlineX1, DlineY1, DlineWidth*3, DlineHeight);
+      rect(DlineX1, DlineY1, DlineWidth*3.1, DlineHeight);
       fill(white);
       stroke(reset);
   }

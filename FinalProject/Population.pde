@@ -33,7 +33,7 @@ void population()
   //rect tool
   DlineX2 = width*2/18;
   DlineY2 = height/10;
-  //tri
+  //tri tool
   DlineX3 = width*3/18;
   DlineY3 = height/10;
 }
