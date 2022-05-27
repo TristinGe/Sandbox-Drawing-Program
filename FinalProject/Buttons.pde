@@ -22,7 +22,7 @@ void Newpaper1() {
   rect(NpaperX, NpaperY, NpaperWidth, NpaperHeight);
   fill(black); //Ink
   textAlign (CENTER, CENTER);
-  size = 20;
+  size = 18;
   textFont(font, size);
   text(secTextString, NpaperX, NpaperY, NpaperWidth, NpaperHeight);
   fill(white);}
@@ -56,12 +56,14 @@ void toolBar()
     //rect
     fill(lgrey);
     rect(DlineX2, DlineY2, DlineWidth, DlineHeight); 
+    fill(black);
+    rect(DlineX2+DlineX1*0.5-20, DlineY2+DlineY1*0.5-20, DlineWidth-13, DlineHeight-13); 
     //tri
     fill(white);
     rect(DlineX3, DlineY3, DlineWidth, DlineHeight); 
     fill(black);
-    triangle(DlineX3, DlineY3, DlineX3+30, DlineY3, DlineY3, DlineY3);
-    
+    triangle(DlineX3+DlineX1*0.5-20, DlineY3+DlineY1*0.5+20, DlineX3+DlineX1*0.5, DlineY3+DlineY1*0.5-20, DlineX3+DlineX1*0.5+20, DlineY3+DlineY1*0.5+20);
+    //
     //ellipse(elineX, elineY, elineD, elineD);
     stroke(reset);}
     if (toolBarReset == true) {
@@ -71,4 +73,16 @@ void toolBar()
       fill(white);
       stroke(reset);
   }
+}
+//
+void eraser()
+{
+  fill(white);
+  rect(eraserX, eraserY, quitBWidth, quitBHeight);
+  fill(black); //Ink
+  textAlign (CENTER, CENTER);
+  size = 18;
+  textFont(font, 20);
+  text(eraser, eraserX, eraserY, quitBWidth, quitBHeight);
+  fill(white);
 }

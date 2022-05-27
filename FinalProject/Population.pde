@@ -6,11 +6,11 @@ void population()
   drawSurfaceY = height/10;
   drawSurfaceWidth = width*3/4;
   drawSurfaceHeight = height*9/10;
-  diameter = width/100;
+  diameter = width/30;
   //
   Newpaper();
   //
-  quitBX = width*18/20;
+  quitBX = width*9/10;
   quitBY = height*0;
   quitBWidth = width/10;
   quitBHeight = height/10;
@@ -36,4 +36,7 @@ void population()
   //tri tool
   DlineX3 = width*3/18;
   DlineY3 = height/10;
+  //eraser
+  eraserX = width*7/10;
+  eraserY = 0;
 }

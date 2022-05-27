@@ -1,5 +1,5 @@
 // Global Variables
-String quitBString="Quit", secTextString="?", tools="tools";
+String quitBString="Quit", secTextString="new paper", tools="tools", eraser="Eraser";
 //
 void textSetup()
 {

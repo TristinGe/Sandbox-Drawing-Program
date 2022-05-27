@@ -1,8 +1,8 @@
 // Global Variables
-Boolean draw = false, toolBarOn = false, toolBarReset = false, lineD=false, rectD=false, triD=false;
+Boolean draw = false, toolBarOn = false, toolBarReset = false, lineD=false, rectD=false, triD=false, eraserOn=false;
 float diameter;
 float quitBX, quitBY, quitBWidth, quitBHeight;
-int reset=1, intilSize=55, size;
+int reset=1, intilSize=30, size;
 color white=#FFFFFF, black=#000000, red=#FF0303, quitBcolour, buttonBlue=#3EA9FF, grey=#CCCCCC, lgrey=#E6E6E6;
 PFont font;
 
@@ -12,6 +12,7 @@ float lineDX, linetDY, lineDWidth, lineDHeight;
 float toolsX, toolsY, toolsWidth, toolsHeight;
 //line tool
 float DlineX1, DlineY1, DlineX2, DlineY2, DlineX3, DlineY3, DlineWidth, DlineHeight, elineX, elineY, elineD;
+float eraserX, eraserY;
 //
 void setup() 
 {
@@ -32,17 +33,14 @@ void draw()
   Newpaper1();
   tool();
   toolBar();
+  eraser();
 
 }//End draw()
 
-void keyPressed() 
-{
-  
-}//End keyPressed()
-
 void mousePressed() 
 {
-  mousepress();
+  mousepressToolBar();
+  toolsele();
 }//End mousePressed()
 //
 //End Main
