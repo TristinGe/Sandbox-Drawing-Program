@@ -14,6 +14,7 @@ float toolsX, toolsY, toolsWidth, toolsHeight;
 float DlineX1, DlineY1, DlineX2, DlineY2, DlineX3, DlineY3, DlineWidth, DlineHeight, elineX, elineY, elineD;
 float eraserX, eraserY;
 //
+color Dcolour;
 void setup() 
 {
   size(960, 540); //fullScreen(), displayWidth & displayHeight, leads to ScreenChecker()
@@ -27,6 +28,7 @@ void draw()
 {
   //
   //paper
+  //rect(0, 0, width, height);
   Newpaper();
   tools();
   quit();
@@ -34,6 +36,7 @@ void draw()
   tool();
   toolBar();
   eraser();
+  
 
 }//End draw()
 
