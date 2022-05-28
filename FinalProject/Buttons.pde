@@ -98,6 +98,31 @@ void colourBar()
   text(colour, colourX, colourY, colourW, colourH);
   //
   if(ColourBOn==true){
+    noStroke();
+    fill(red);
+    rect(redX, redY, CselW, colourH);
     
+    fill(Dblue);
+    rect(blueX, blueY, CselW, colourH);
+    
+    fill(Dyellow);
+    rect(yellowX, yellowY, CselW, colourH);
+    
+    fill(Dpurple);
+    rect(purpleX, purpleY, CselW, colourH);
+    
+    fill(Dgreen);
+    rect(greenX, greenY, CselW, colourH);
+    
+    fill(Dorange);
+    rect(orangeX, orangeY, CselW, colourH);
+    
+    fill(black);
+    rect(blackX, blackY, CselW, colourH);
+  }
+  if(ColourBReset==true){
+  fill(grey);
+  noStroke();
+  rect(redX, colourY, CselW*7.1, colourH);
   }
 }

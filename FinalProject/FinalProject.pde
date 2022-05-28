@@ -14,7 +14,8 @@ float toolsX, toolsY, toolsWidth, toolsHeight;
 float DlineX1, DlineY1, DlineX2, DlineY2, DlineX3, DlineY3, DlineWidth, DlineHeight, elineX, elineY, elineD;
 float eraserX, eraserY;
 float colourX, colourY, colourW, colourH;
-float redX, redY, blueX, blueY, yellowX, yellowY, orangeX, orangeY, purpleX, purpleY, greenX, greenY;
+float redX, redY, blueX, blueY, yellowX, yellowY, orangeX, orangeY, purpleX, purpleY, greenX, greenY, blackX, blackY, CselW;
+color Dblue=#1756FF, Dyellow=#FBFF1F, Dorange=#FF9121, Dpurple=#8F21FF, Dgreen=#1BCB0C, DrawingColour;
 //
 color Dcolour;
 void setup() 
@@ -35,17 +36,19 @@ void draw()
   tools();
   quit();
   Newpaper1();
-  tool();
-  toolBar();
   eraser();
   colourBar();
-
+  toolBar();
+  tool();
+  DrawingColour();
 }//End draw()
 
 void mousePressed() 
 {
   mousepressToolBar();
   toolsele();
+  ColorBarPress();
+  DrawingColour();
 }//End mousePressed()
 //
 //End Main

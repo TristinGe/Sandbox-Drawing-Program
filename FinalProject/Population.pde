@@ -45,4 +45,26 @@ void population()
   colourY = height/5+5;
   colourW = width/16;
   colourH = height/10;
+  CselW = width/45;
+  //Red
+  redX = width/15;
+  redY = height/5+5;
+  //Blue
+  blueX = width*4/45;
+  blueY = height/5+5;
+  //Yellow
+  yellowX = width/9;
+  yellowY= redY;
+  //Purple
+  purpleX = width*2/15;
+  purpleY = redY;
+  //Green
+  greenX = width*7/45;
+  greenY = redY;
+  //Orange
+  orangeX = width*8/45;
+  orangeY = redY;
+  //Black
+  blackX = width*1/5;
+  blackY = redY;
 }
