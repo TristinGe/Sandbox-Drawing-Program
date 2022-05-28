@@ -37,7 +37,6 @@ void tool()
   rect(toolsX, toolsY, toolsWidth, toolsHeight);
   stroke(reset);
   //
-  //Quit Button Text
   fill(black); //Ink
   textAlign (CENTER, CENTER);
   size = 20;
@@ -52,17 +51,17 @@ void toolBar()
     fill(white);
     rect(DlineX1, DlineY1, DlineWidth, DlineHeight); 
     fill(black);
-    ellipse(DlineX1*1.5, DlineY1*1.5, DlineWidth/9, DlineWidth/9);
+    ellipse(DlineX1+DlineX1*0.43, DlineY1+DlineY1*0.5, DlineWidth/9, DlineWidth/9);
     //rect
     fill(lgrey);
     rect(DlineX2, DlineY2, DlineWidth, DlineHeight); 
     fill(black);
-    rect(DlineX2+DlineX1*0.5-20, DlineY2+DlineY1*0.5-20, DlineWidth-13, DlineHeight-13); 
+    rect(DlineX2+DlineX1*0.5-25, DlineY2+DlineY1*0.5-20, DlineWidth-13, DlineHeight-13); 
     //tri
     fill(white);
     rect(DlineX3, DlineY3, DlineWidth, DlineHeight); 
     fill(black);
-    triangle(DlineX3+DlineX1*0.5-20, DlineY3+DlineY1*0.5+20, DlineX3+DlineX1*0.5, DlineY3+DlineY1*0.5-20, DlineX3+DlineX1*0.5+20, DlineY3+DlineY1*0.5+20);
+    triangle(DlineX3+DlineX1*0.5-25, DlineY3+DlineY1*0.5+20, DlineX3+DlineX1*0.5-5, DlineY3+DlineY1*0.5-20, DlineX3+DlineX1*0.5+15, DlineY3+DlineY1*0.5+20);
     //
     //ellipse(elineX, elineY, elineD, elineD);
     stroke(reset);}
@@ -71,9 +70,7 @@ void toolBar()
    fill(grey);
       rect(DlineX1, DlineY1, DlineWidth*3.1, DlineHeight);
       fill(white);
-      stroke(reset);
-  }
-}
+      stroke(reset);}}
 //
 void eraser()
 {
@@ -85,4 +82,22 @@ void eraser()
   textFont(font, 20);
   text(eraser, eraserX, eraserY, quitBWidth, quitBHeight);
   fill(white);
+}
+//
+void colourBar() 
+{
+  if (mouseX>=colourX && mouseX<=colourX+toolsWidth && mouseY>=colourY && mouseY<=colourY+toolsHeight) {
+  fill(buttonBlue);} else {fill(white);}
+  noStroke();
+  rect(colourX, colourY, colourW, colourH);
+  //
+  fill(black); //Ink
+  textAlign (CENTER, CENTER);
+  size = 20;
+  textFont(font, size);
+  text(colour, colourX, colourY, colourW, colourH);
+  //
+  if(ColourBOn==true){
+    
+  }
 }

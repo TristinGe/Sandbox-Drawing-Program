@@ -1,5 +1,5 @@
 // Global Variables
-Boolean draw = false, toolBarOn = false, toolBarReset = false, lineD=false, rectD=false, triD=false, eraserOn=false;
+Boolean draw = false, toolBarOn = false, toolBarReset = false, lineD=false, rectD=false, triD=false, eraserOn=false, ColourBOn=false, ColourBReset=false;
 float diameter;
 float quitBX, quitBY, quitBWidth, quitBHeight;
 int reset=1, intilSize=30, size;
@@ -13,6 +13,8 @@ float toolsX, toolsY, toolsWidth, toolsHeight;
 //line tool
 float DlineX1, DlineY1, DlineX2, DlineY2, DlineX3, DlineY3, DlineWidth, DlineHeight, elineX, elineY, elineD;
 float eraserX, eraserY;
+float colourX, colourY, colourW, colourH;
+float redX, redY, blueX, blueY, yellowX, yellowY, orangeX, orangeY, purpleX, purpleY, greenX, greenY;
 //
 color Dcolour;
 void setup() 
@@ -36,7 +38,7 @@ void draw()
   tool();
   toolBar();
   eraser();
-  
+  colourBar();
 
 }//End draw()
 
