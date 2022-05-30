@@ -16,7 +16,7 @@ void quit()
   text(quitBString, quitBX, quitBY, quitBWidth, quitBHeight);}
 //
 //
-void Newpaper1() {
+void NewpaperB() {
   //Second Text
   fill(white);
   rect(NpaperX, NpaperY, NpaperWidth, NpaperHeight);
@@ -81,8 +81,7 @@ void eraser()
   size = 18;
   textFont(font, 20);
   text(eraser, eraserX, eraserY, quitBWidth, quitBHeight);
-  fill(white);
-}
+  fill(white);}
 //
 void colourBar() 
 {
@@ -119,10 +118,52 @@ void colourBar()
     
     fill(black);
     rect(blackX, blackY, CselW, colourH);
+    
+    fill(white);
+    rect(whiteX, whiteY, CselW, colourH);
   }
   if(ColourBReset==true){
   fill(grey);
   noStroke();
-  rect(redX, colourY, CselW*7.1, colourH);
-  }
+  rect(redX, colourY, CselW*8.1, colourH);}}
+//
+void BackGround()
+{
+  if (mouseX>=BGX && mouseX<=BGX+BGW && mouseY>=BGY && mouseY<=BGY+BGH) {
+  fill(buttonBlue);} else {fill(white);}
+  noStroke();
+  rect(BGX, BGY, BGW, BGH);
+  //
+  fill(black); //Ink
+  textAlign (CENTER, CENTER);
+  size = 18;
+  textFont(font, size);
+  text(BG, BGX, BGY, BGW, BGH);
+  if(BGbar==true){
+    noStroke();
+    fill(white);
+    rect(BGWhiteX, BGWhiteY, BGWidth, BGH);
+    
+    fill(lgrey);
+    rect(BGGreyX, BGGreyY, BGWidth, BGH);
+    
+    fill(black);
+    rect(BGBlackX, BGBlackY, BGWidth, BGH);}
+  if(BGbarReset==true){
+  fill(grey);
+  noStroke();
+  rect(BGWhiteX, BGWhiteY, BGWidth*3.1, BGH);}}
+//
+void templates()
+{
+  if (mouseX>=temX && mouseX<=temX+temW && mouseY>=temY && mouseY<=temY+temH) {
+  fill(buttonBlue);} else {fill(white);}
+  noStroke();
+  rect(temX, temY, temW, temH);
+  //
+  fill(black); //Ink
+  textAlign (CENTER, CENTER);
+  size = 18;
+  textFont(font, size);
+  text(temT, temX, temY, temW, temH);
 }

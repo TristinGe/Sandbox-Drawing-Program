@@ -67,4 +67,37 @@ void population()
   //Black
   blackX = width*1/5;
   blackY = redY;
+  //White
+  whiteX = width*2/9;
+  whiteY = redY;
+  //BGbar
+  BGX = 0;
+  BGY = height*3/10+10;
+  BGW = width/16;
+  BGH = height/10;
+  //
+  BGWhiteX = width/15;
+  BGWhiteY = BGY;
+  BGWidth = width/18;
+  BGHeight = height/10;
+  //
+  BGGreyX = width*11/90;
+  BGGreyY = BGY;
+  //
+  BGBlackX = width*16/90;
+  BGBlackY = BGY;
+  //
+  HorX = width/4;
+  HorY = 0;
+  HorW = width;
+  HorH = height/10;
+  VerX = width/4-54;
+  VerY = 0;
+  VerW = 54;
+  VerH = height;
+  //
+  temX = 0;
+  temY = height*4/10+15;
+  temW = width/16;
+  temH = height/10;
 }
