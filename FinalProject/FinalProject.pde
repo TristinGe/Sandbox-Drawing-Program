@@ -73,6 +73,7 @@ void mousePressed()
   ColorBarPress();
   DrawingColour();
   BackGroundbarPress();
+  TempBarPress();
 }//End mousePressed()
 //
 //End Main

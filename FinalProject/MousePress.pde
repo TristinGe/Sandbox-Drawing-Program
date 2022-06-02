@@ -14,9 +14,9 @@ void mousepressToolBar()
 //
 void toolsele()
 {
-  if (mouseX>=DlineX1 && mouseX<=DlineX1+DlineWidth && mouseY>=DlineY1 && mouseY<=DlineY1+DlineHeight){lineD=true;rectD=false;triD=false;eraserOn=false;}
-  if (mouseX>=DlineX2 && mouseX<=DlineX2+DlineWidth && mouseY>=DlineY2 && mouseY<=DlineY2+DlineHeight){lineD=false;rectD=true;triD=false;eraserOn=false;}
-  if (mouseX>=DlineX3 && mouseX<=DlineX3+DlineWidth && mouseY>=DlineY3 && mouseY<=DlineY3+DlineHeight){lineD=false;rectD=false;triD=true;eraserOn=false;}
+  if (mouseX>=DlineX1 && mouseX<=DlineX1+DlineWidth && mouseY>=DlineY1 && mouseY<=DlineY1+DlineHeight && toolBarOn==true){lineD=true;rectD=false;triD=false;eraserOn=false;}
+  if (mouseX>=DlineX2 && mouseX<=DlineX2+DlineWidth && mouseY>=DlineY2 && mouseY<=DlineY2+DlineHeight && toolBarOn==true){lineD=false;rectD=true;triD=false;eraserOn=false;}
+  if (mouseX>=DlineX3 && mouseX<=DlineX3+DlineWidth && mouseY>=DlineY3 && mouseY<=DlineY3+DlineHeight && toolBarOn==true){lineD=false;rectD=false;triD=true;eraserOn=false;}
   if (mouseX>=eraserX && mouseX<=eraserX+quitBWidth && mouseY>=eraserY && mouseY<=eraserY+quitBHeight){lineD=false;rectD=false;triD=false;eraserOn=true;}}
 //
 void ColorBarPress()
@@ -33,8 +33,15 @@ void ColorBarPress()
 //
 void BackGroundbarPress()
 {
-  if (mouseX>=BGX && mouseX<=BGX+BGW && mouseY>=BGY && mouseY<=BGY+BGH){if(BGbar == false) {BGbar=true;BGbarReset=false;println("On");} else {BGbar=false;BGbarReset=true;println("Off");}}
-  if (mouseX>=BGWhiteX && mouseX<=BGWhiteX+BGWidth && mouseY>=BGY && mouseY<=BGWhiteY+BGH){backgroundC=white;}
-  if (mouseX>=BGGreyX && mouseX<=BGGreyX+BGWidth && mouseY>=BGY && mouseY<=BGGreyY+BGH){backgroundC=lgrey;}
-  if (mouseX>=BGBlackX && mouseX<=BGBlackX+BGWidth && mouseY>=BGY && mouseY<=BGBlackY+BGH){backgroundC=black;}
+  if (mouseX>=BGX && mouseX<=BGX+BGW && mouseY>=BGY && mouseY<=BGY+BGH){if(BGbar == false) {BGbar=true;BGbarReset=false;} else {BGbar=false;BGbarReset=true;}}
+  if (mouseX>=BGWhiteX && mouseX<=BGWhiteX+BGWidth && mouseY>=BGY && mouseY<=BGWhiteY+BGH && BGbar==true){backgroundC=white;}
+  if (mouseX>=BGGreyX && mouseX<=BGGreyX+BGWidth && mouseY>=BGY && mouseY<=BGGreyY+BGH && BGbar==true){backgroundC=lgrey;}
+  if (mouseX>=BGBlackX && mouseX<=BGBlackX+BGWidth && mouseY>=BGY && mouseY<=BGBlackY+BGH && BGbar==true){backgroundC=black;}
+}
+void TempBarPress()
+{
+if (mouseX>=temX && mouseX<=temX+temW && mouseY>=temY && mouseY<=temY+temY){if(exTemp == false) {exTemp=true;exTempReset=false;println("On");} else {exTemp=false;exTempReset=true;println("Off");}}
+if (mouseX>=exX1 && mouseX<=exX1+exW && mouseY>=exY1 && mouseY<=exY1+exH && exTemp==true){image(biaoqing1, drawSurfaceX*2-drawSurfaceX/2, drawSurfaceY);}
+if (mouseX>=exX2 && mouseX<=exX2+exW && mouseY>=exY2 && mouseY<=exY2+exH && exTemp==true){image(biaoqing2, drawSurfaceX*2-drawSurfaceX/2, drawSurfaceY);}
+if (mouseX>=exX3 && mouseX<=exX3+exW && mouseY>=exY3 && mouseY<=exY3+exH && exTemp==true){image(biaoqing3, drawSurfaceX*2-drawSurfaceX/2, drawSurfaceY);}
 }
