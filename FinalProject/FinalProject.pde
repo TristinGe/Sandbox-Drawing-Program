@@ -1,6 +1,6 @@
 //This Program Runs at 960*540
 // Global Variables
-Boolean draw = false, toolBarOn = false, toolBarReset = false, lineD=false, rectD=false, triD=false, eraserOn=false, ColourBOn=false, ColourBReset=false, BGbar=false, BGbarReset=false;
+Boolean draw = false, toolBarOn = false, toolBarReset = false, lineD=false, rectD=false, triD=false, eraserOn=false, ColourBOn=false, ColourBReset=false, BGbar=false, BGbarReset=false, exTemp=false, exTempReset=false;
 float diameter;
 float quitBX, quitBY, quitBWidth, quitBHeight;
 int reset=1, intilSize=30, size;
@@ -29,6 +29,8 @@ color backgroundC=white;
 //templates
 float temX, temY, temW, temH;
 float temX1, temY1, temX2, temY2, temX3, temY3;
+float exX1, exY1, exW, exH, exX2, exY2, exW2, exH2, exX3, exY3, exW3, exH3;
+PImage biaoqing1, biaoqing2, biaoqing3;
 void setup() 
 {
   size(960, 540); //fullScreen(), displayWidth & displayHeight, leads to ScreenChecker()

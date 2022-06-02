@@ -100,4 +100,19 @@ void population()
   temY = height*4/10+15;
   temW = width/16;
   temH = height/10;
+  //
+  exX1 = width/15;
+  exY1 = temY;
+  exW = width/18;
+  exH = height/10;
+  //
+  exX2 = width*11/90;
+  exY2 = temY;
+  //
+  exX3 = width*16/90;
+  exY3 = temY;
+  //
+  biaoqing1 = loadImage("biaoqing1.png");
+  biaoqing2 = loadImage("biaoqing2.png");
+  biaoqing3 = loadImage("biaoqing3.png");
 }

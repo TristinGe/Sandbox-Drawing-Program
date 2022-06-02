@@ -166,4 +166,23 @@ void templates()
   size = 18;
   textFont(font, size);
   text(temT, temX, temY, temW, temH);
+  
+  if(exTemp==true){
+    noStroke();
+    fill(white);
+    rect(exX1, exY1, exW, exH);
+    image(biaoqing1,exX1, exY1, exW, exH);
+    
+    fill(lgrey);
+    rect(exX2, exY2, exW, exH);
+    image(biaoqing2,exX2, exY2, exW, exH);
+    
+    rect(exX3, exY3, exW, exH);
+    image(biaoqing3,exX3, exY3, exW, exH);
+  }
+  if(exTempReset==true){
+    noStroke();
+    fill(grey);
+    rect(exX1, exY1, exW*3.1, exH);
+  }
 }
