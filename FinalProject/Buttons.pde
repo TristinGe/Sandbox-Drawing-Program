@@ -186,3 +186,18 @@ void templates()
     rect(exX1, exY1, exW*3.1, exH);
   }
 }
+//
+void MusicBar()
+{
+  if (mouseX>=MuBarX && mouseX<=MuBarX+MuBarW && mouseY>=MuBarY && mouseY<=MuBarY+MuBarH) {
+  fill(buttonBlue);} else {fill(white);}
+  noStroke();
+  rect(MuBarX, MuBarY, MuBarW, MuBarH);
+  //
+  fill(black); //Ink
+  textAlign (CENTER, CENTER);
+  size = 18;
+  textFont(font, size);
+  text(JukeBox, MuBarX, MuBarY, MuBarW, MuBarH);
+}
+  

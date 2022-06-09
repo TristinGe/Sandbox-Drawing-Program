@@ -1,3 +1,10 @@
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+
 //This Program Runs at 960*540
 // Global Variables
 Boolean draw = false, toolBarOn = false, toolBarReset = false, lineD=false, rectD=false, triD=false, eraserOn=false, ColourBOn=false, ColourBReset=false, BGbar=false, BGbarReset=false, exTemp=false, exTempReset=false;
@@ -31,6 +38,15 @@ float temX, temY, temW, temH;
 float temX1, temY1, temX2, temY2, temX3, temY3;
 float exX1, exY1, exW, exH, exX2, exY2, exW2, exH2, exX3, exY3, exW3, exH3;
 PImage biaoqing1, biaoqing2, biaoqing3;
+//Music
+Minim minim; //creates an object to access all function
+int numberOfSongs = 4;
+AudioPlayer[] song = new AudioPlayer[numberOfSongs]; //creates a "Play List" variable holding extesions ...
+AudioMetaData[] songMetaData = new AudioMetaData[numberOfSongs];
+int currentSong = numberOfSongs - numberOfSongs;
+color purple=#2C08FF; //Comparison of Gray Scale and Hexidecimal
+PFont titleFont;
+float MuBarX, MuBarY, MuBarW, MuBarH;
 void setup() 
 {
   size(960, 540); //fullScreen(), displayWidth & displayHeight, leads to ScreenChecker()
@@ -38,6 +54,7 @@ void setup()
   //
   population();
   textSetup();
+  MusicSetup();
 }
 
 void draw() 
@@ -45,7 +62,6 @@ void draw()
   //
   //paper
   //rect(0, 0, width, height);
-
   Newpaper();
   tools();
   noStroke();
@@ -64,7 +80,14 @@ void draw()
   BackGround();
   templates();
   tool();
+  MusicDraw();
+  MusicBar();
 }//End draw()
+
+void keyPressed()
+{
+  MusicButton();
+}
 
 void mousePressed() 
 {

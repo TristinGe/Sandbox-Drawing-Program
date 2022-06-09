@@ -115,4 +115,9 @@ void population()
   biaoqing1 = loadImage("biaoqing1.png");
   biaoqing2 = loadImage("biaoqing2.png");
   biaoqing3 = loadImage("biaoqing3.png");
+  //
+  MuBarX = 0;
+  MuBarY = height*5/10+20;
+  MuBarW = width/16;
+  MuBarH = height/10;
 }
