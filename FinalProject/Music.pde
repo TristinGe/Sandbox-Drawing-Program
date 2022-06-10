@@ -4,9 +4,9 @@ void MusicSetup()
 {
   minim = new Minim(this); //load from data directroy, loadFile() should also load from project folder, like loadImage()
   song[currentSong] = minim.loadFile("MusicDownload/groove.mp3"); //able to pass absolute paths, file name & extesnion, and URL
-  song[currentSong+=1] = minim.loadFile("MusicDownload/The_Simplest.mp3");
-  song[currentSong+=1] = minim.loadFile("MusicDownload/Start_Your_Engines.mp3");
-  song[currentSong+=1] = minim.loadFile("MusicDownload/Beat_Your_Competition.mp3");
+  song[currentSong+=1] = minim.loadFile("MusicDownload/groove.mp3");
+  song[currentSong+=1] = minim.loadFile("MusicDownload/groove.mp3");
+  song[currentSong+=1] = minim.loadFile("MusicDownload/groove.mp3");
   currentSong-=currentSong;
   for ( int i=currentSong; i<song.length; i++ ) {
     songMetaData[i] = song[i].getMetaData(); //reads song meta 1, like song 1, mimicing array notation
