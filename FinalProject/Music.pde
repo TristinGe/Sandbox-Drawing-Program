@@ -1,5 +1,5 @@
-String  CurrentSongPosition="song[currentSong].position()";
-String Position=String.valueOf(song[currentSong].position());
+String CurrentSongPosition="song[currentSong].position()";
+//String Position=String.valueOf(song[currentSong].position());
 void MusicSetup()
 {
   minim = new Minim(this); //load from data directroy, loadFile() should also load from project folder, like loadImage()
@@ -42,6 +42,7 @@ void MusicDraw()
   textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
   //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
   textFont(titleFont, 20); //Change the number until it fits, largest font size
+  String Position=String.valueOf(song[currentSong].position()/1000);
   text( Position, width*1/4, height*0, width*1/2, height*1/10);
   fill(255); //Reset to white for rest of the program
   //

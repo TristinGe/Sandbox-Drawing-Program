@@ -199,5 +199,43 @@ void MusicBar()
   size = 18;
   textFont(font, size);
   text(JukeBox, MuBarX, MuBarY, MuBarW, MuBarH);
+  
+  if(MBOn==true){
+    noStroke();
+    fill(white);
+    image(LastS,LSX,LSY,MBBW,MBBH);
+    
+    if(song[currentSong].isPlaying()){
+      fill(grey);
+      rect(PSX,PSY,MBBW,MBBH);
+      image(PauseS,PSX,PSY,MBBW,MBBH);
+    } else {
+      fill(grey);
+      rect(PSX,PSY,MBBW,MBBH);
+      image(PlayS,PSX,PSY,MBBW,MBBH);}
+
+    image(NextS,NSX,NSY,MBBW,MBBH);
+    
+    if(LoopO==true){
+      fill(grey);
+      rect(LoopSX,LoopSY,MBBW,MBBH);
+      image(OrderS,LoopSX,LoopSY,MBBW,MBBH);
+    } else {
+      fill(grey);
+      rect(LoopSX,LoopSY,MBBW,MBBH);
+      image(LoopS,LoopSX,LoopSY,MBBW,MBBH);}
+
+  }
+  if(MBreset==true){
+    noStroke();
+    fill(grey);
+    rect(LSX,LSY,MBBW*3.1,MBBH);
+    rect(LoopSX,LoopSY,MBBW,MBBH);
+  }
+}
+//
+void MBB()
+{
+  
 }
   

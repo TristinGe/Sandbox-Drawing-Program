@@ -5,7 +5,7 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
-//This Program Runs at 960*540
+//This Program Runs at 960*540, DO NOT TRY TO STRETCH IT!
 // Global Variables
 Boolean draw = false, toolBarOn = false, toolBarReset = false, lineD=false, rectD=false, triD=false, eraserOn=false, ColourBOn=false, ColourBReset=false, BGbar=false, BGbarReset=false, exTemp=false, exTempReset=false;
 float diameter;
@@ -47,6 +47,9 @@ int currentSong = numberOfSongs - numberOfSongs;
 color purple=#2C08FF; //Comparison of Gray Scale and Hexidecimal
 PFont titleFont;
 float MuBarX, MuBarY, MuBarW, MuBarH;
+float NSX, NSY, LSX, LSY, PSX, PSY, MBBW, MBBH, LoopSX, LoopSY;
+Boolean MBOn=false, MBreset=false, LoopI=false, LoopO=true;
+PImage NextS, LastS, PlayS, PauseS, LoopS, OrderS;
 void setup() 
 {
   size(960, 540); //fullScreen(), displayWidth & displayHeight, leads to ScreenChecker()
@@ -97,6 +100,7 @@ void mousePressed()
   DrawingColour();
   BackGroundbarPress();
   TempBarPress();
+  MBPress();
 }//End mousePressed()
 //
 //End Main

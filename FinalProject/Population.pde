@@ -120,4 +120,25 @@ void population()
   MuBarY = height*5/10+20;
   MuBarW = width/16;
   MuBarH = height/10;
+  //
+  NextS = loadImage("fastForward.png");
+  LastS = loadImage("fastBack.png");
+  PlayS = loadImage("play.png");
+  PauseS = loadImage("pause.png");
+  LoopS = loadImage("loop.png");
+  OrderS = loadImage("order.png");
+  //
+  LSX = width/15;
+  LSY = height*5/10+20;
+  MBBW = width/18;
+  MBBH = height/10;
+  //
+  PSX = width*11/90;
+  PSY = LSY;
+  //
+  NSX = width*16/90;
+  NSY = LSY;
+  //
+  LoopSX = width*11/90;
+  LoopSY = height*6/10+25;
 }

@@ -38,10 +38,53 @@ void BackGroundbarPress()
   if (mouseX>=BGGreyX && mouseX<=BGGreyX+BGWidth && mouseY>=BGY && mouseY<=BGGreyY+BGH && BGbar==true){backgroundC=lgrey;}
   if (mouseX>=BGBlackX && mouseX<=BGBlackX+BGWidth && mouseY>=BGY && mouseY<=BGBlackY+BGH && BGbar==true){backgroundC=black;}
 }
+//
 void TempBarPress()
 {
-if (mouseX>=temX && mouseX<=temX+temW && mouseY>=temY && mouseY<=temY+temY){if(exTemp == false) {exTemp=true;exTempReset=false;println("On");} else {exTemp=false;exTempReset=true;println("Off");}}
+if (mouseX>=temX && mouseX<=temX+temW && mouseY>=temY && mouseY<=temY+temH){if(exTemp == false) {exTemp=true;exTempReset=false;println("On");} else {exTemp=false;exTempReset=true;println("Off");}}
 if (mouseX>=exX1 && mouseX<=exX1+exW && mouseY>=exY1 && mouseY<=exY1+exH && exTemp==true){image(biaoqing1, drawSurfaceX*2-drawSurfaceX/2, drawSurfaceY);}
 if (mouseX>=exX2 && mouseX<=exX2+exW && mouseY>=exY2 && mouseY<=exY2+exH && exTemp==true){image(biaoqing2, drawSurfaceX*2-drawSurfaceX/2, drawSurfaceY);}
 if (mouseX>=exX3 && mouseX<=exX3+exW && mouseY>=exY3 && mouseY<=exY3+exH && exTemp==true){image(biaoqing3, drawSurfaceX*2-drawSurfaceX/2, drawSurfaceY);}
+}
+//
+void MBPress()
+{
+  if(mouseX>=MuBarX && mouseX<=MuBarX+MuBarW && mouseY>=MuBarY && mouseY<=MuBarY+MuBarH){if(MBOn == false) {MBOn=true;MBreset=false;println("On");} else {MBOn=false;MBreset=true;println("Off");}}
+  if(mouseX>=LSX && mouseX<=LSX+MBBW && mouseY>=LSY && mouseY<=LSY+MBBH && MBOn == true){
+    if ( song[currentSong].isPlaying() ) {
+      song[currentSong].pause();
+      song[currentSong].rewind();
+      playlistArrayErrorB();
+      song[currentSong].play();
+    } else {
+      song[currentSong].rewind();
+      playlistArrayErrorB();
+      song[currentSong].play();}};
+
+  if(mouseX>=PSX && mouseX<=PSX+MBBW && mouseY>=PSY && mouseY<=PSY+MBBH && MBOn == true){
+    if ( song[currentSong].isPlaying() ) { 
+      song[currentSong].pause();
+    } else if ( song[currentSong].position() >= song[currentSong].length()-song[currentSong].length()*1/5 ) {//Special Situation: at the end of the song, rewind (built-in stop button)
+      //End of Song Calculation: hardcode "ending of song" within 1 second of End-Of-File, song1.length()-1000
+      //Alternate End of Song Calculation: listen to 80% of the song, last 20% is "The End"
+      song[currentSong].rewind();
+      song[currentSong].play();
+    } else { 
+      song[currentSong].play(); //Parameter is milli-seconds from start of audio file to start playing
+    }} 
+ 
+  if(mouseX>=NSX && mouseX<=NSX+MBBW && mouseY>=NSY && mouseY<=NSY+MBBH && MBOn == true){
+    if ( song[currentSong].isPlaying() ) {
+      song[currentSong].pause();
+      song[currentSong].rewind();
+      playlistArrayErrorN();
+      song[currentSong].play();
+    } else {
+      song[currentSong].rewind();
+      playlistArrayErrorN();
+      song[currentSong].play();}}
+      
+  if(mouseX>=LoopSX && mouseX<=LoopSX+MBBW && mouseY>=LoopSY && mouseY<=LoopSY+MBBH && MBOn == true){
+    if(LoopI==false){LoopI=true;LoopO=false;} else {LoopI=false;LoopO=true;}
+  }
 }
