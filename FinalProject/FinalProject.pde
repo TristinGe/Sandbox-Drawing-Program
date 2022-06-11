@@ -48,6 +48,7 @@ color purple=#2C08FF; //Comparison of Gray Scale and Hexidecimal
 PFont titleFont;
 float MuBarX, MuBarY, MuBarW, MuBarH;
 float NSX, NSY, LSX, LSY, PSX, PSY, MBBW, MBBH, LoopSX, LoopSY;
+float hintLX, hintLY;
 Boolean MBOn=false, MBreset=false, LoopI=false, LoopO=true;
 PImage NextS, LastS, PlayS, PauseS, LoopS, OrderS;
 void setup() 

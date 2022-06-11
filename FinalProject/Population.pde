@@ -141,4 +141,7 @@ void population()
   //
   LoopSX = width*11/90;
   LoopSY = height*6/10+25;
+  //
+  hintLX = 0;
+  hintLY = height*6/10+25;
 }

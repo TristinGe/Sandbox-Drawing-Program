@@ -223,15 +223,34 @@ void MusicBar()
     } else {
       fill(grey);
       rect(LoopSX,LoopSY,MBBW,MBBH);
-      image(LoopS,LoopSX,LoopSY,MBBW,MBBH);}
-
-  }
+      image(LoopS,LoopSX,LoopSY,MBBW,MBBH);}}
+      
   if(MBreset==true){
     noStroke();
     fill(grey);
     rect(LSX,LSY,MBBW*3.1,MBBH);
-    rect(LoopSX,LoopSY,MBBW,MBBH);
-  }
+    rect(LoopSX,LoopSY,MBBW,MBBH);}
+    
+  if(LoopI==true){
+    rect(hintLX, hintLY+MBBH/4, MBBW*1.5, MBBH/2); 
+    fill(black); //Ink
+    textAlign (CENTER, CENTER);
+    size = 18;
+    textFont(font, size);
+    text(Hint1, hintLX, hintLY+MBBH/4, MBBW*1.5, MBBH/2);}
+  
+  if(LoopI==false){
+    fill(grey);
+    noStroke();  
+    rect(hintLX, hintLY+MBBH/4, MBBW*1.5, MBBH/2);}
+    
+  fill(grey);
+  rect(hintLX, hintLY+MBBH, MBBW*4, MBBH*1.5);
+  fill(black); //Ink
+  textAlign (CENTER, CENTER);
+  size = 18;
+  textFont(font, size);
+  text(Hint2, hintLX, hintLY+MBBH, MBBW*4, MBBH*1.5);
 }
 //
 void MBB()

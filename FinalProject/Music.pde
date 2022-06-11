@@ -52,18 +52,15 @@ void MusicButton()
 {
   //First Play Button: if ( key=='p' || key=='P' ) song1.play();
   //Update Play Button for Play-Pause-"Fix an Error"
-  if ( key=='p' || key=='P' ) {
+if( key==' '){
     if ( song[currentSong].isPlaying() ) { 
       song[currentSong].pause();
-    } else if ( song[currentSong].position() >= song[currentSong].length()-song[currentSong].length()*1/5 ) {//Special Situation: at the end of the song, rewind (built-in stop button)
-      //End of Song Calculation: hardcode "ending of song" within 1 second of End-Of-File, song1.length()-1000
-      //Alternate End of Song Calculation: listen to 80% of the song, last 20% is "The End"
-      song[currentSong].rewind();
-      song[currentSong].play();
     } else { 
-      song[currentSong].play(); //Parameter is milli-seconds from start of audio file to start playing
-    }
-  } //End Play-Pause Button
+      if(LoopI==true){
+      song[currentSong].loop();
+      } else {
+      song[currentSong].play();if(song[currentSong].position()>= song[currentSong].length()-2 ){ playlistArrayErrorN();song[currentSong].play();}}
+    }}
   //
   //Another Play Button, as a finite loop() && infinite loop()
   //Only press a number for this code below
