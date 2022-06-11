@@ -2,13 +2,13 @@
 void MusicSetup()
 {
   minim = new Minim(this); //load from data directroy, loadFile() should also load from project folder, like loadImage()
-  song[currentSong] = minim.loadFile("MusicDownload/groove.mp3"); //able to pass absolute paths, file name & extesnion, and URL
-  song[currentSong+=1] = minim.loadFile("MusicDownload/groove.mp3");
-  song[currentSong+=1] = minim.loadFile("MusicDownload/groove.mp3");
-  song[currentSong+=1] = minim.loadFile("MusicDownload/groove.mp3");
+  song[currentSong] = minim.loadFile("MusicDownload/ワルキューレ - 一度だけの恋なら.mp3"); //able to pass absolute paths, file name & extesnion, and URL
+  //song[currentSong+=1] = minim.loadFile("MusicDownload/ピノキオピー,鏡音リン,初音ミク - ねぇねぇねぇ。.mp3");
+  //song[currentSong+=1] = minim.loadFile("MusicDownload/ゆう十 - Lemon（Cover 米津玄师）.mp3");
+  //song[currentSong+=1] = minim.loadFile("MusicDownload/ワルキューレ - 一度だけの恋なら.mp3");
   currentSong-=currentSong;
   for ( int i=currentSong; i<song.length; i++ ) {
-    songMetaData[i] = song[i].getMetaData(); //reads song meta 1, like song 1, mimicing array notation
+    //songMetaData[i] = song[i].getMetaData(); //reads song meta 1, like song 1, mimicing array notation
   }//End Meta Data
   /*
   songMetaData[0] = song[0].getMetaData(); //reads song meta 1, like song 1, mimicing array notation
@@ -21,7 +21,7 @@ void MusicSetup()
   //
   println( "Start of Console" );
   println( "Click the Console to Finish Starting this Program" ); //Review of OS-level button
-  println( "Title", songMetaData[currentSong].title() ); //Introduction of Key:Value Pairs (similar to websites)
+  //println( "Title", songMetaData[currentSong].title() ); //Introduction of Key:Value Pairs (similar to websites)
   //
 }
 //
@@ -48,14 +48,12 @@ void MusicDraw()
   //rect(width*1/4, height*0, width*1/2, height*1/10);
   fill(black);
   text( INFO, width*1/4, height*0, width*1/2, height*1/10);
-  fill(255); //Reset to white for rest of the program
+  fill(255); 
   //
 }
 //
 void MusicButton()
 {
-  //First Play Button: if ( key=='p' || key=='P' ) song1.play();
-  //Update Play Button for Play-Pause-"Fix an Error"
 if( key==' '){
     if ( song[currentSong].isPlaying() ) { 
       song[currentSong].pause();
