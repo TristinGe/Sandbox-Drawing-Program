@@ -1,5 +1,4 @@
-String CurrentSongPosition="song[currentSong].position()";
-//String Position=String.valueOf(song[currentSong].position());
+//String CurrentSongPosition="song[currentSong].position()";
 void MusicSetup()
 {
   minim = new Minim(this); //load from data directroy, loadFile() should also load from project folder, like loadImage()
@@ -36,14 +35,19 @@ void MusicDraw()
   println("Current Song:", currentSong);
   println( "Song Position", song[currentSong].position(), "Song Length", song[currentSong].length() );
   //
-  //background (black); //Reminder of OS-Level Button
+  fill(purple); 
+  textAlign (CENTER, CENTER); 
+  //
+  textFont(font, 20);
+  String[] Info = new String[3];
+  Info[0] = songMetaData[currentSong].title();
+  Info[1] = String.valueOf(song[currentSong].length()/1000);
+  Info[2] = String.valueOf(song[currentSong].position()/1000);
+  String INFO = join(Info, " / "); 
+  
   //rect(width*1/4, height*0, width*1/2, height*1/10);
-  fill(purple); //Ink, hexidecimal copied from Color Selector
-  textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
-  //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
-  textFont(titleFont, 20); //Change the number until it fits, largest font size
-  String Position=String.valueOf(song[currentSong].position()/1000);
-  text( Position, width*1/4, height*0, width*1/2, height*1/10);
+  fill(black);
+  text( INFO, width*1/4, height*0, width*1/2, height*1/10);
   fill(255); //Reset to white for rest of the program
   //
 }
