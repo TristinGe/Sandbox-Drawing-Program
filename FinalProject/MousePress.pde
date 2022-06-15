@@ -68,8 +68,7 @@ void MBPress()
       if(LoopI==true){
       song[currentSong].loop();
       } else {
-      song[currentSong].play();if(song[currentSong].position()>= song[currentSong].length()-2 ){ playlistArrayErrorN();song[currentSong].play();}}
-    }} 
+      song[currentSong].play();if(song[currentSong].position()>= song[currentSong].length()-2 ){playlistArrayErrorN();song[currentSong].play();}}}} 
  
   if(mouseX>=NSX && mouseX<=NSX+MBBW && mouseY>=NSY && mouseY<=NSY+MBBH && MBOn == true){
     if ( song[currentSong].isPlaying() ) {
@@ -83,6 +82,5 @@ void MBPress()
       song[currentSong].play();}}
       
   if(mouseX>=LoopSX && mouseX<=LoopSX+MBBW && mouseY>=LoopSY && mouseY<=LoopSY+MBBH && MBOn == true){
-    if(LoopI==false){LoopI=true;LoopO=false;} else {LoopI=false;LoopO=true;}
-  }
+    if(LoopI==false){LoopI=true;LoopO=false;} else {LoopI=false;LoopO=true;}}
 }
