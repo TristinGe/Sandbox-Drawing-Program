@@ -2,7 +2,7 @@
 void MusicSetup()
 {
   minim = new Minim(this); //load from data directroy, loadFile() should also load from project folder, like loadImage()
-  song[currentSong] = minim.loadFile("MusicDownload/洛天依 - starlight.mp3"); //able to pass absolute paths, file name & extesnion, and URL
+  song[currentSong] = minim.loadFile("MusicDownload/groove.mp3"); //able to pass absolute paths, file name & extesnion, and URL
   song[currentSong+=1] = minim.loadFile("MusicDownload/ヒグチアイ - 悪魔の子.mp3");
   song[currentSong+=1] = minim.loadFile("MusicDownload/ゆう十 - Lemon（Cover 米津玄师）.mp3");
   song[currentSong+=1] = minim.loadFile("MusicDownload/ワルキューレ - 一度だけの恋なら.mp3");
