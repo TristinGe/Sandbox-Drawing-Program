@@ -2,26 +2,26 @@
 void MusicSetup()
 {
   minim = new Minim(this); //load from data directroy, loadFile() should also load from project folder, like loadImage()
-  song[currentSong] = minim.loadFile("MusicDownload/ワルキューレ - 一度だけの恋なら.mp3"); //able to pass absolute paths, file name & extesnion, and URL
-  //song[currentSong+=1] = minim.loadFile("MusicDownload/ピノキオピー,鏡音リン,初音ミク - ねぇねぇねぇ。.mp3");
-  //song[currentSong+=1] = minim.loadFile("MusicDownload/ゆう十 - Lemon（Cover 米津玄师）.mp3");
-  //song[currentSong+=1] = minim.loadFile("MusicDownload/ワルキューレ - 一度だけの恋なら.mp3");
+  song[currentSong] = minim.loadFile("MusicDownload/洛天依 - starlight.mp3"); //able to pass absolute paths, file name & extesnion, and URL
+  song[currentSong+=1] = minim.loadFile("MusicDownload/ヒグチアイ - 悪魔の子.mp3");
+  song[currentSong+=1] = minim.loadFile("MusicDownload/ゆう十 - Lemon（Cover 米津玄师）.mp3");
+  song[currentSong+=1] = minim.loadFile("MusicDownload/ワルキューレ - 一度だけの恋なら.mp3");
   currentSong-=currentSong;
   for ( int i=currentSong; i<song.length; i++ ) {
-    //songMetaData[i] = song[i].getMetaData(); //reads song meta 1, like song 1, mimicing array notation
+    songMetaData[i] = song[i].getMetaData(); //reads song meta 1, like song 1, mimicing array notation
   }//End Meta Data
-  /*
-  songMetaData[0] = song[0].getMetaData(); //reads song meta 1, like song 1, mimicing array notation
-   songMetaData[1] = song[1].getMetaData();
-   songMetaData[2] = song[2].getMetaData();
-   songMetaData[3] = song[3].getMetaData();
-   */
+  
+   //songMetaData[0] = song[0].getMetaData(); //reads song meta 1, like song 1, mimicing array notation
+   //songMetaData[1] = song[1].getMetaData();
+   //songMetaData[2] = song[2].getMetaData();
+   //songMetaData[3] = song[3].getMetaData();
+   
 
   titleFont = createFont ("Harrington", 55); //Must also Tools / Create Font / Find Font / Do Not Press "OK"
   //
   println( "Start of Console" );
   println( "Click the Console to Finish Starting this Program" ); //Review of OS-level button
-  //println( "Title", songMetaData[currentSong].title() ); //Introduction of Key:Value Pairs (similar to websites)
+  println( "Title", songMetaData[currentSong].title() ); //Introduction of Key:Value Pairs (similar to websites)
   //
 }
 //
