@@ -61,7 +61,7 @@ if( key==' '){
       if(LoopI==true){
       song[currentSong].loop();
       } else {
-      song[currentSong].play();if(song[currentSong].position()>= song[currentSong].length()-2 ){ playlistArrayErrorN();song[currentSong].play();}}
+      song[currentSong].play();if(song[currentSong].isPlaying() ){ song[currentSong].pause();song[currentSong].rewind();playlistArrayErrorN();song[currentSong].play();}}
     }}
   //
   //Another Play Button, as a finite loop() && infinite loop()
